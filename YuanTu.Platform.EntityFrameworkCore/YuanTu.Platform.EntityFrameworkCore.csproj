@@ -1,0 +1,119 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+		<RootNamespace>YuanTu.Platform</RootNamespace>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+		<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+		<!--<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>-->
+	</PropertyGroup>
+	<PropertyGroup>
+		<Revision>$([System.DateTime]::Now.ToString("yyyy.M.d.Hm"))</Revision>
+		<AssemblyVersion>$(Revision)</AssemblyVersion>
+		<FileVersion>$(Revision)</FileVersion>
+		<Version>$(Revision)</Version>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="EntityFrameworkCore\新文件夹1\**" />
+		<EmbeddedResource Remove="EntityFrameworkCore\新文件夹1\**" />
+		<None Remove="EntityFrameworkCore\新文件夹1\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Migrations\20180726102624_Upgrade_ABP_380.cs" />
+		<Compile Remove="Migrations\20180927062408_test.cs" />
+		<Compile Remove="Migrations\20190111071724_Upgraded_To_Abp_v4_1_0.cs" />
+		<Compile Remove="Migrations\20200528033053_modifyPrinter.cs" />
+		<Compile Remove="Migrations\20200528033053_modifyPrinter.Designer.cs" />
+		<Compile Remove="Migrations\20200601031351_2020060101.cs" />
+		<Compile Remove="Migrations\20200601031351_2020060101.Designer.cs" />
+		<Compile Remove="Migrations\20200601031614_2020060102.cs" />
+		<Compile Remove="Migrations\20200601031614_2020060102.Designer.cs" />
+		<Compile Remove="Migrations\20200601033157_20200601.cs" />
+		<Compile Remove="Migrations\20200601033157_20200601.Designer.cs" />
+		<Compile Remove="Migrations\20200602073910_20200602.cs" />
+		<Compile Remove="Migrations\20200602073910_20200602.Designer.cs" />
+		<Compile Remove="Migrations\20200602074325_20200602.cs" />
+		<Compile Remove="Migrations\20200602074325_20200602.Designer.cs" />
+		<Compile Remove="Migrations\20200602074459_20200602.cs" />
+		<Compile Remove="Migrations\20200602074459_20200602.Designer.cs" />
+		<Compile Remove="Migrations\20200602092855_2020060201.cs" />
+		<Compile Remove="Migrations\20200602092855_2020060201.Designer.cs" />
+		<Compile Remove="Migrations\20200602093202_2020060201.cs" />
+		<Compile Remove="Migrations\20200602093202_2020060201.Designer.cs" />
+		<Compile Remove="Migrations\20200602093449_2020060202.cs" />
+		<Compile Remove="Migrations\20200602093449_2020060202.Designer.cs" />
+		<Compile Remove="Migrations\20200602103630_2020060203.cs" />
+		<Compile Remove="Migrations\20200602103630_2020060203.Designer.cs" />
+		<Compile Remove="Migrations\20200602103743_2020060203.cs" />
+		<Compile Remove="Migrations\20200602103743_2020060203.Designer.cs" />
+		<Compile Remove="Migrations\20200603015233_2020060301.cs" />
+		<Compile Remove="Migrations\20200603015233_2020060301.Designer.cs" />
+		<Compile Remove="Migrations\20200629004726_20200629.cs" />
+		<Compile Remove="Migrations\20200629004726_20200629.Designer.cs" />
+		<Compile Remove="Migrations\20200723071533_20200723.cs" />
+		<Compile Remove="Migrations\20200723071533_20200723.Designer.cs" />
+		<Compile Remove="Migrations\20200723071914_20200723.cs" />
+		<Compile Remove="Migrations\20200723071914_20200723.Designer.cs" />
+		<Compile Remove="Migrations\20200723072437_20200723.cs" />
+		<Compile Remove="Migrations\20200723072437_20200723.Designer.cs" />
+		<Compile Remove="Migrations\20200804015820_20200804.cs" />
+		<Compile Remove="Migrations\20200804015820_20200804.Designer.cs" />
+		<Compile Remove="Migrations\20200804020907_20200804.cs" />
+		<Compile Remove="Migrations\20200804020907_20200804.Designer.cs" />
+		<Compile Remove="Migrations\20200804021155_20200804.cs" />
+		<Compile Remove="Migrations\20200804021155_20200804.Designer.cs" />
+		<Compile Remove="Migrations\20200804021832_20200804.cs" />
+		<Compile Remove="Migrations\20200804021832_20200804.Designer.cs" />
+		<Compile Remove="Migrations\20200804022221_20200804.cs" />
+		<Compile Remove="Migrations\20200804022221_20200804.Designer.cs" />
+		<Compile Remove="Migrations\20200804032651_20200804.cs" />
+		<Compile Remove="Migrations\20200804032651_20200804.Designer.cs" />
+		<Compile Remove="Migrations\20200804033902_2020080401.cs" />
+		<Compile Remove="Migrations\20200804033902_2020080401.Designer.cs" />
+		<Compile Remove="Migrations\20200815063152_20200815.cs" />
+		<Compile Remove="Migrations\20200815063152_20200815.Designer.cs" />
+		<Compile Remove="Migrations\20200815063335_20200815.cs" />
+		<Compile Remove="Migrations\20200815063335_20200815.Designer.cs" />
+		<Compile Remove="Migrations\20200815063816_20200815.cs" />
+		<Compile Remove="Migrations\20200815063816_20200815.Designer.cs" />
+		<Compile Remove="Migrations\20200829024940_20200829.cs" />
+		<Compile Remove="Migrations\20200829024940_20200829.Designer.cs" />
+		<Compile Remove="Migrations\20200829034204_20200829.cs" />
+		<Compile Remove="Migrations\20200829034204_20200829.Designer.cs" />
+		<Compile Remove="Migrations\20200829055702_20200829.cs" />
+		<Compile Remove="Migrations\20200829055702_20200829.Designer.cs" />
+		<Compile Remove="Migrations\20200902064939_2020090201.cs" />
+		<Compile Remove="Migrations\20200902064939_2020090201.Designer.cs" />
+		<Compile Remove="Migrations\20200905054906_20200905.cs" />
+		<Compile Remove="Migrations\20200905054906_20200905.Designer.cs" />
+		<Compile Remove="Migrations\20200908060628_20200908.cs" />
+		<Compile Remove="Migrations\20200908060628_20200908.Designer.cs" />
+		<Compile Remove="Migrations\20200908061543_20200908.cs" />
+		<Compile Remove="Migrations\20200908061543_20200908.Designer.cs" />
+		<Compile Remove="Migrations\20200924055512_20200924.cs" />
+		<Compile Remove="Migrations\20200924055512_20200924.Designer.cs" />
+		<Compile Remove="Migrations\20201125083909_20201125.cs" />
+		<Compile Remove="Migrations\20201125083909_20201125.Designer.cs" />
+		<Compile Remove="Migrations\PlatformDbContextModelSnapshot - 副本.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="..\YuanTu.Platform.Core\Properties\GlobalAssemblyInfo.cs" Link="Properties\GlobalAssemblyInfo.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\YuanTu.Platform.Core\YuanTu.Platform.Core.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Migrations\" />
+		<Folder Include="Properties\" />
+	</ItemGroup>
+</Project>

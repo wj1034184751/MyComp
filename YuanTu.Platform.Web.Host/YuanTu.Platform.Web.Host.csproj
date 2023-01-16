@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+		<PreserveCompilationContext>true</PreserveCompilationContext>
+		<AssemblyName>YuanTu.Platform.Web.Host</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<PackageId>YuanTu.Platform.Web.Host</PackageId>
+		<UserSecretsId>YuanTu-Platform-56C2EF2F-ABD6-4EFC-AAF2-2E81C34E8FB1</UserSecretsId>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+		<!--<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>-->
+		<LangVersion>7.2</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Revision>$([System.DateTime]::Now.ToString("yyyy.M.d.Hm"))</Revision>
+		<AssemblyVersion>$(Revision)</AssemblyVersion>
+		<FileVersion>$(Revision)</FileVersion>
+		<Version>$(Revision)</Version>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Remove="wwwroot\swagger\ui\index.html" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="..\YuanTu.Platform.Core\Properties\GlobalAssemblyInfo.cs" Link="Properties\GlobalAssemblyInfo.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="app.config" />
+		<None Update="Dockerfile">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="log4net.config">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</None>
+		<None Update="wwwroot\**\*">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\YuanTu.Platform.Web.Core\YuanTu.Platform.Web.Core.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Abp.Castle.Log4Net" Version="6.3.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="wwwroot\swagger\ui\index.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties appsettings_1json__JsonSchema="" />
+		</VisualStudio>
+	</ProjectExtensions>
+</Project>

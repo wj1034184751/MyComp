@@ -1,0 +1,4592 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YuanTu.Platform.Application</name>
+    </assembly>
+    <members>
+        <member name="M:YuanTu.Platform.AppCacheHelper.UpdateCache(YuanTu.Platform.Sessions.Dto.CacheType)">
+            <summary>
+            更新缓冲版本
+            </summary>
+            <param name="cacheType"></param>
+            <returns></returns>
+        </member>
+        <member name="F:YuanTu.Platform.AppConsts.DefaultPassPhrase">
+            <summary>
+            Default pass phrase for SimpleStringCipher decrypt/encrypt operations
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.App.Dto.AppAuthDto.AppName">
+            <summary>
+            应用名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.App.Dto.AppAuthDto.AppId">
+            <summary>
+            应用ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.App.Dto.AppAuthDto.AppKey">
+            <summary>
+            公钥
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.App.Dto.AppAuthDto.AppSecret">
+            <summary>
+            密钥
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.App.Dto.AppAuthDto.Token">
+            <summary>
+            生成的Token值
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.App.Dto.AppAuthDto.Enabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.App.IAppAuthAppService.GetByAppIdAsync(System.String)">
+            <summary>
+            根据APPID获取实体
+            </summary>
+            <param name="appId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.App.IAppAuthAppService.BatchActiveAsync(System.String,System.String)">
+            <summary>
+            批量启用
+            </summary>
+            <param name="ids"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Authorization.Menus.AbpMenuAppService.UpdateCache">
+            <summary>
+            更新缓存文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Authorization.Menus.AbpMenuAppService.SendNotifications(System.String)">
+            <summary>
+            发送实时通知，通知前端更新缓存
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsActive">
+            <summary>
+            是否禁用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsAddEnabled">
+            <summary>
+            添加
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsEditEnabled">
+            <summary>
+            编辑
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsActiveEnabled">
+            <summary>
+            激活/停用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsDeleteEnabled">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsApproveEnabled">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsPrintEnabled">
+            <summary>
+            打印
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.IsOrgDiscriminated">
+            <summary>
+            是否区分机构
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.Indeterminate">
+            <summary>
+            未确定状态
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Authorization.Menus.Dto.AbpMenuDto.Checked">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Authorization.Menus.IAbpMenuAppService.GetAllByUserIdAsync(System.Int32)">
+            <summary>
+            根据用户ID获取菜单
+            </summary>
+            <param name="uid">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.LotId">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.TerminalID">
+            <summary>
+            终端号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.MAC">
+            <summary>
+            网卡MAC
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.SignoutTime">
+            <summary>
+            签退时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.IsSignout">
+            <summary>
+            判断是否已签退
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.ReportedMoney">
+            <summary>
+            上报金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.TotalMoney">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.IsLocked">
+            <summary>
+            状态锁定
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashSignDto.TotalCount">
+            <summary>
+            交易次数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDetailDto.CashTradeId">
+            <summary>
+            交易ID
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDetailDto.Money">
+            <summary>
+            投入币值
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDetailDto.LotId">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDetailDto.TraceId">
+            <summary>
+            追溯流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDetailDto.RechargeId">
+            <summary>
+            充值流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.Status">
+            <summary>
+            钱箱状态
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.StatusText">
+            <summary>
+            钱箱状态
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.TotalMoney">
+            <summary>
+            支付金额(分)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.PatientId">
+            <summary>
+            病人ID
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.PatientName">
+            <summary>
+            病人姓名
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.CurrentMoney">
+            <summary>
+            当前钞值
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.LotId">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.TerminalID">
+            <summary>
+            终端号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.MAC">
+            <summary>
+            网卡MAC
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.EndTime">
+            <summary>
+            结束入钞时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.Extend">
+            <summary>
+            扩展字段
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.TraceId">
+            <summary>
+            追溯流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Cash.Dto.CashTradeDto.RechargeId">
+            <summary>
+            充值流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Common.Dto.ParentCustomPagedAndSortedWithOrgDto`2.ParentId">
+            <summary>
+            父节点Id
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Common.Dto.ParentCustomPagedAndSortedWithOrgDto`2.OrgId">
+            <summary>
+            机构ID
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthConfigDto.Name">
+            <summary>
+            配置名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthConfigDto.HospitalId">
+            <summary>
+            医院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthConfigDto.DeviceType">
+            <summary>
+            设备类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthConfigDto.IsActive">
+            <summary>
+            启用/停用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthConfigDto.JsonText">
+            <summary>
+            配置JSON文本
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthContentDto.Name">
+            <summary>
+            配置名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthContentDto.IsActive">
+            <summary>
+            是否开启
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthContentDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.Health.Dto.HealthUserDataDto">
+            <summary>
+            预检用户数据
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Name">
+            <summary>
+            姓名
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.IdNo">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.StartTime">
+            <summary>
+            开始检测时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.IsComplete">
+            <summary>
+            是否完成
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Height">
+            <summary>
+            身高
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Weight">
+            <summary>
+            体重
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Fat">
+            <summary>
+            体脂（预留）
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.SaO2">
+            <summary>
+            血氧
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Temperature">
+            <summary>
+            体温
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.BloodPressure">
+            <summary>
+            血压
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Pulse">
+            <summary>
+            脉搏
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.Ecg">
+            <summary>
+            心电
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.HtTime">
+            <summary>
+            测量身高体重耗时
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.SaO2Time">
+            <summary>
+            测量血氧耗时
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.TempTime">
+            <summary>
+            测量体温耗时
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.BpTime">
+            <summary>
+            测量血压耗时
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.FatTime">
+            <summary>
+            测量体脂耗时（预留）
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.EcgTime">
+            <summary>
+            测量心电耗时（预留）
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Health.Dto.HealthUserDataDto.TotalTime">
+            <summary>
+            总耗时
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.InternalUtil.Utils.ComputeMD5(System.IO.FileStream,System.Boolean)">
+            <summary>
+            计算文件MD5值
+            </summary>
+            <param name="fs"></param>
+            <param name="lower">是否小写</param>
+        </member>
+        <member name="M:YuanTu.Platform.InternalUtil.Utils.ComputeMD5(System.Byte[],System.Boolean)">
+            <summary>
+            计算文件MD5值
+            </summary>
+            <param name="bytes"></param>
+            <param name="lower">是否小写</param>
+        </member>
+        <member name="M:YuanTu.Platform.InternalUtil.Utils.ComputeSHA1(System.Byte[],System.Boolean)">
+            <summary>
+            计算文件SHA1值
+            </summary>
+            <param name="bytes"></param>
+            <param name="lower">是否小写</param>
+        </member>
+        <member name="M:YuanTu.Platform.InternalUtil.Utils.ComputeSHA1(System.IO.FileStream,System.Boolean)">
+            <summary>
+            计算文件SHA1值
+            </summary>
+            <param name="fs"></param>
+            <param name="lower">是否小写</param>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.Name">
+            <summary>
+            程序名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.Range">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.Path">
+            <summary>
+            程序路径
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.Deal">
+            <summary>
+            协议
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.LocalAddress">
+            <summary>
+            本地地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.LocalPort">
+            <summary>
+            本地端口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.RemoteAddress">
+            <summary>
+            远端地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.RemotePort">
+            <summary>
+            远端端口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.Rules">
+            <summary>
+            规则设置
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.Operation">
+            <summary>
+            操作选项
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.FireWalls.Dto.FireWallDto.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.Dto.PrintTemplateBaseDto`1.Attachments">
+            <summary>
+            附件
+            </summary> 
+        </member>
+        <member name="T:YuanTu.Platform.Local.Dto.PrintTemplateDto">
+            <summary>
+            打印模板管理
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.Dto.PrintTemplateDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.Dto.PrintTemplateDto.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.Dto.PrintTemplateDto.Content">
+            <summary>
+            模板内容
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.Dto.PrintTemplateDto.PrintTypeId">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Local.Dto.PrintTemplateDto.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDetailDto.PluginId">
+            <summary>
+            插件编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDetailDto.Version">
+            <summary>
+            版本
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDetailDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.PagedSTPluginFileVersionDto">
+            <summary>
+            文件版本
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.STPluginFileVersionDto">
+            <summary>
+            附件管理
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.FolderId">
+            <summary>
+            文件夹ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.Version">
+            <summary>
+            版本号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.PluginCode">
+            <summary>
+            插件代码（字典中插件类型代码）
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.PluginName">
+            <summary>
+            插件名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.JsonText">
+            <summary>
+            文件结构JSON内容
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.Path">
+            <summary>
+            程序路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.Args">
+            <summary>
+            exe传入参数
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.PluginType">
+            <summary>
+            类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.AbsolutePath">
+            <summary>
+            文件绝对路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFileVersionDto.TerminalIds">
+            <summary>
+            要应用该版本的终端集合
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.STPluginDirectoryDto">
+            <summary>
+            文件目录
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.FolderType">
+            <summary>
+            文件夹类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.Name">
+            <summary>
+            文件夹名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.FileId">
+            <summary>
+            关联文件ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.FileSize">
+            <summary>
+            大小
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.HashCode">
+            <summary>
+            哈希码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.ExtendId">
+            <summary>
+            扩展字段
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.FilePath">
+            <summary>
+            文件路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginFolderDto.Children">
+            <summary>
+            子集
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDto.Code">
+            <summary>
+            编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDto.PluginType">
+            <summary>
+            插件类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STPluginDto.Attachments">
+            <summary>
+            附件
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePartDto.TemplateId">
+            <summary>
+            模板编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePartDto.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePartDto.PartId">
+            <summary>
+            配件编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePartDto.PartName">
+            <summary>
+            配件名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePartDto.PartType">
+            <summary>
+            配件类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePartDto.JsonText">
+            <summary>
+            JSON文本
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginNetDto.TemplateId">
+            <summary>
+            模板编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginNetDto.PluginId">
+            <summary>
+            插件编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginNetDto.Port">
+            <summary>
+            端口
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginNetDto.NetType">
+            <summary>
+            网络类型：TCP /UDP /HTTP
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.TemplateId">
+            <summary>
+            模板编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.PluginId">
+            <summary>
+            插件编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.PluginName">
+            <summary>
+            插件名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.PluginCode">
+            <summary>
+            插件代码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.VersionId">
+            <summary>
+            版本编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.Version">
+            <summary>
+            版本名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.Enabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.Path">
+            <summary>
+            程序路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.NetList">
+            <summary>
+            网络请求集合
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.Type">
+            <summary>
+            类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.StartMode">
+            <summary>
+            启动方式 1-延时启动 2-定时启动
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.Delay">
+            <summary>
+            延迟时间(秒)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplatePluginDto.FixedTime">
+            <summary>
+            固定启动时间(HH:mm:ss,例如：9:00:00)
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplateDto.Code">
+            <summary>
+            模板编码
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplateDto.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplateDto.TemplateType">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplateDto.Parts">
+            <summary>
+            配件列表
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTemplateDto.Plugins">
+            <summary>
+            插件件列表
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalFolderDto.Name">
+            <summary>
+            文件夹名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalFolderDto.ExtendId">
+            <summary>
+            扩展字段
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalFolderDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalFolderDto.Level">
+            <summary>
+            层级
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalFolderDto.Children">
+            <summary>
+            终端列表
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPartDto.TermianlId">
+            <summary>
+            终端编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPartDto.PartId">
+            <summary>
+            配件编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPartDto.PartName">
+            <summary>
+            配件名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPartDto.PartType">
+            <summary>
+            配件类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPartDto.JsonText">
+            <summary>
+            JSON文本
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginNetDto.TermianlId">
+            <summary>
+            终端编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginNetDto.PluginId">
+            <summary>
+            插件编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginNetDto.Port">
+            <summary>
+            端口
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginNetDto.NetType">
+            <summary>
+            网络类型：TCP /UDP /HTTP
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.TermianlId">
+            <summary>
+            终端编号
+            </summary>  
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.PluginId">
+            <summary>
+            插件编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.PluginName">
+            <summary>
+            插件名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.PluginCode">
+            <summary>
+            插件代码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.VersionId">
+            <summary>
+            版本编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.Version">
+            <summary>
+            版本名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.Enabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.Path">
+            <summary>
+            程序路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.NetList">
+            <summary>
+            网络请求集合
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.Type">
+            <summary>
+            类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.StartMode">
+            <summary>
+            启动方式 1-延时启动 2-定时启动
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.Delay">
+            <summary>
+            延迟时间(秒)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalPluginDto.FixedTime">
+            <summary>
+            固定启动时间(HH:mm:ss,例如：9:00:00)
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.PagedSTTerminalRequestDto.Original">
+            <summary>
+            原始数据，不带配件，插件等信息 1-是 0-否
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.Id">
+            <summary>
+            终端ID
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.Code">
+            <summary>
+            终端编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.TerminalType">
+            <summary>
+            终端类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.Enable">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.HardwareInfo">
+            <summary>
+            硬件信息
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.Plugins">
+            <summary>
+            插件信息
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.PatientCard">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.Hospital">
+            <summary>
+            医院信息
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfoDto.RunMode">
+            <summary>
+            运行模式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.PatientCardDto.CardType">
+            <summary>
+            卡类别
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.PatientCardDto.IsInnerCardNo">
+            <summary>
+            是否卡内号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.PatientCardDto.IsKeyA">
+            <summary>
+            是否需要密钥
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.PatientCardDto.KeyA">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.PatientCardDto.Sec">
+            <summary>
+            Sec
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.PatientCardDto.Block">
+            <summary>
+            块
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.STHardwareInfo">
+            <summary>
+            硬件配置
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.CardReaders">
+            <summary>
+            读卡器
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.Keyboards">
+            <summary>
+            键盘
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.Printers">
+            <summary>
+            打印机
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.CashBoxs">
+            <summary>
+            钱箱
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.Sumatuns">
+            <summary>
+            扫码墩
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.Cameras">
+            <summary>
+            摄像头
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.CardDispensers">
+            <summary>
+            发卡机
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.Leds">
+            <summary>
+            LED
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STHardwareInfo.Motherboards">
+            <summary>
+            控制板
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.Hospital">
+            <summary>
+            医院信息配置
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.Id">
+            <summary>
+            机构ID
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.RemoteIP">
+            <summary>
+            服务器地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.Timeout">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.HospitalId">
+            <summary>
+            医院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.AreaCode">
+            <summary>
+            分院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.UnionId">
+            <summary>
+            医联体编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.GatewayUrl">
+            <summary>
+            网关地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.ProvincialMiCode">
+            <summary>
+            省医保编码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.MunicipalMiCode">
+            <summary>
+            市医保编码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.ServerUrl">
+            <summary>
+            后台服务地址
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.Hospital.MonitorUrl">
+            <summary>
+            监控平台地址
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.RunMode">
+            <summary>
+            运行模式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.StatusBaseDto.Mac">
+            <summary>
+            网卡序列号
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.STStatusDto">
+            <summary>
+            更新设备在线/离线状态 请求实体类
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STStatusDto.IsPowerOn">
+            <summary>
+            是否在线
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.Dto.STUpdateStatusDto">
+            <summary>
+             是否更新
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STUpdateStatusDto.IsUpdated">
+            <summary>
+            是否更新
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Code">
+            <summary>
+            编号号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Name">
+            <summary>
+            终端名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Spec">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.TerminalTypeId">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.IP">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.BuildingId">
+            <summary>
+            建筑Id
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.FloorId">
+            <summary>
+            所在楼层
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Position">
+            <summary>
+            点位
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.X">
+            <summary>
+            所在坐标
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Y">
+            <summary>
+            所在坐标
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Z">
+            <summary>
+            所在坐标
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.HID">
+            <summary>
+            硬盘序列号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Mac">
+            <summary>
+            网卡序列号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.IsActive">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.IsPowerOn">
+            <summary>
+            是否在线
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.IsUpdated">
+            <summary>
+            是否已更新
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Version">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.TemplateId">
+            <summary>
+            模板编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.TemplateName">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.HospitalId">
+            <summary>
+            医院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.ProductKey">
+            <summary>
+            产品序列号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.DeviceSecret">
+            <summary>
+            设备密钥
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Parts">
+            <summary>
+            配件列表
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.Plugins">
+            <summary>
+            插件件列表
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.FolderId">
+            <summary>
+            文件夹ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.WardAreaId">
+            <summary>
+            病区ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.HospitalCode">
+            <summary>
+            院区编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.SignDate">
+            <summary>
+            签到时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.GatewayTemplateId">
+            <summary>
+            网关模板编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.GatewayTemplateName">
+            <summary>
+            网关模板名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.HealthConfigId">
+            <summary>
+            预检设备功能配置编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.CanbeAccess">
+            <summary>
+            准入
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalDto.RunMode">
+            <summary>
+            运行模式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Name">
+            <summary>
+             名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Path">
+            <summary>
+            程序路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Enabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Remark">
+            <summary>
+            版本更新日志
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Net">
+            <summary>
+            网络端口类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Args">
+            <summary>
+            exe传入参数
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.ST.Dto.STTerminalExDto.Dir">
+            <summary>
+            文件绝对路径
+            </summary> 
+        </member>
+        <member name="T:YuanTu.Platform.ST.ISTPluginFileVersionAppService">
+            <summary>
+            文件版本
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.ST.STPluginFileVersionAppService">
+            <summary>
+            文件版本服务类
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.#ctor(Abp.Domain.Repositories.IRepository{YuanTu.Platform.ST.STPluginFileVersion,System.String},Abp.Domain.Repositories.IRepository{YuanTu.Platform.ST.STPluginFolder,System.String},Abp.Domain.Repositories.IRepository{YuanTu.Platform.Sys.AbpCustomEnum,System.String},Abp.Domain.Repositories.IRepository{YuanTu.Platform.ST.STTerminalPlugin,System.String})">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.AddTerminalPlugin(YuanTu.Platform.ST.Dto.STPluginFileVersionDto,YuanTu.Platform.ST.Dto.STPluginFileVersionDto)">
+            <summary>
+            添加终端插件信息
+            </summary>
+            <param name="input"></param>
+            <param name="m"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.LoadData(YuanTu.Platform.ST.Dto.STPluginFileVersionDto)">
+            <summary>
+            装配数据
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.SetJsonText(YuanTu.Platform.ST.Dto.STPluginFileVersionDto,YuanTu.Platform.ST.STPluginFileVersion)">
+            <summary>
+            生成文件目录结构
+            </summary>
+            <param name="input"></param>
+            <param name="oldVersion"></param>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.GetFileTree(System.Collections.Generic.List{YuanTu.Platform.Sys.AbpCustomEnum})">
+            <summary>
+            获取目录树
+            </summary>
+            <param name="enums"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.GetParent(YuanTu.Platform.ST.Dto.STPluginDirectoryDto,System.Collections.Generic.List{YuanTu.Platform.ST.Dto.STPluginDirectoryDto},System.Collections.Generic.List{YuanTu.Platform.ST.STPluginFolder})">
+            <summary>
+            向上查找当前节点的父级节点
+            </summary>
+            <param name="current"></param>
+            <param name="parent"></param>
+            <param name="all"></param>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.GetChild(YuanTu.Platform.ST.Dto.STPluginDirectoryDto,System.Collections.Generic.List{YuanTu.Platform.Sys.AbpCustomEnum},System.Collections.Generic.Dictionary{System.String,YuanTu.Platform.ST.Dto.STPluginDirectoryDto})">
+            <summary>
+            组合成父子结构
+            </summary>
+            <param name="prev"></param>
+            <param name="enums"></param>
+            <param name="dic"></param>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.GetSuperior(System.Collections.Generic.List{YuanTu.Platform.Sys.AbpCustomEnum},YuanTu.Platform.Sys.AbpCustomEnum,System.String)">
+            <summary>
+            向上查找字典数据上级
+            </summary>
+            <param name="enums"></param>
+            <param name="current"></param>
+            <param name="code"></param>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.SetVersion(YuanTu.Platform.ST.Dto.STPluginFileVersionDto,YuanTu.Platform.ST.STPluginFileVersion@)">
+            <summary>
+            设置版本号
+            </summary>
+            <param name="input"></param>
+            <param name="model"></param>
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFileVersionAppService.DeleteByIds(System.String)">
+            <summary>
+            根据节点删除版本号
+            </summary> 
+        </member>
+        <member name="M:YuanTu.Platform.ST.STPluginFolderAppService.DeleteByIds(System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids">主键ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.ImportTemplateAsync(System.String,System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="ids"></param>
+            <param name="templateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.ImportGwTemplateAsync(System.String,System.String,System.String)">
+            <summary>
+            导入网关配置模板
+            </summary>
+            <param name="ids"></param>
+            <param name="templateId"></param>
+            <param name="templateName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.ImportHealthConfigAsync(System.String,System.String)">
+            <summary>
+            导入预检设备配置
+            </summary>
+            <param name="ids"></param>
+            <param name="configId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.BatchActiveAsync(System.String,System.String)">
+            <summary>
+            批量激活
+            </summary>
+            <param name="ids"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.GetPluginFileList(System.String)">
+            <summary>
+            获取插件文件列表
+            </summary>
+            <param name="mac">mac地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.GetPartFileList(System.String)">
+            <summary>
+            获取配件文件列表
+            </summary>
+            <param name="mac">mac地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.GetHardwareInfo(System.String)">
+            <summary>
+            获取终端硬件配置列表
+            </summary>
+            <param name="mac">mac地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.GetHealthConfig(System.String)">
+            <summary>
+            获取预检设备配置
+            </summary>
+            <param name="code">终端编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.UpdatePowerOn(YuanTu.Platform.ST.Dto.STStatusDto)">
+            <summary>
+            更新设备在线/离线状态
+            </summary>
+            <param name="data">入参</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.UpdateStatus(YuanTu.Platform.ST.Dto.STUpdateStatusDto)">
+            <summary>
+            更新设备程序更新状态
+            </summary>
+            <param name="data">入参</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.UpdatePartStatus(System.String,System.Int32,System.String)">
+            <summary>
+            更新配件状态和消息
+            </summary>
+            <param name="id">配件关联表ID</param>
+            <param name="status">状态</param>
+            <param name="message">消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.ST.ISTTerminalAppService.ExistCode(System.String)">
+            <summary>
+            检测是否存在指定终端编号数据
+            </summary>
+            <param name="code">终端编号</param>
+            <returns></returns>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.Operation">
+            <summary>
+            操作
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.Description">
+            <summary>
+            详细信息
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.Url">
+            <summary>
+            程序或脚本路径
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.FileExt">
+            <summary>
+            文件扩展名
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.ServerPath">
+            <summary>
+            服务器路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.FileSize">
+            <summary>
+            大小
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.HashCode">
+            <summary>
+            哈希码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.LocalPath">
+            <summary>
+            本地路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.Params">
+            <summary>
+            参数(可选)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.StartFrom">
+            <summary>
+            起始于(可选)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Operation.Dto.TaskOperationDto.TaskId">
+            <summary>
+            任务ID
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.StartPlan">
+            <summary>
+            任务开始计划：每天，每周，每月，一次，计算机启动时，当前用户登录时，当特定事件被记录时等
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.StartTime">
+            <summary>
+            开始时刻
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.EndTime">
+             <summary>
+            结束时刻
+             </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.Interval">
+            <summary>
+            时间间隔
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.Unit">
+            <summary>
+            间隔单位 天/周
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.DetailWeek">
+            <summary>
+            具体更新时间  星期几   每周专用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.DetailMonth">
+            <summary>
+            具体更新月份   每月专用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.IsDelay">
+            <summary>
+            是否可延迟
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.DelayTime">
+            <summary>
+            延迟时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.IsRepeat">
+            <summary>
+            是否重复执行
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.RepeatInterval">
+            <summary>
+            重复执行间隔
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.RepeatLastTime">
+            <summary>
+            重复任务持续时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.IsImplement">
+            <summary>
+            任务的运行时间超过特定时间不再执行
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.ExpireTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDetailDto.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.TaskName">
+            <summary>
+            计划名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.Status">
+            <summary>
+            状态  1 启用 2 准备就绪 3 禁用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.TriggerId">
+            <summary>
+            触发器
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.OperationId">
+            <summary>
+            操作  
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.NextStartTime">
+            <summary>
+            下次运行时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.LastStartTime">
+            <summary>
+            上次运行时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.LastStartResult">
+            <summary>
+            上次运行结果
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.Triggers">
+            <summary>
+            触发器列表
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Dto.TaskDto.Operations">
+             <summary>
+            操作列表
+             </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Management.ITaskAppService.BatchRunningAsync(System.String,System.String)">
+            <summary>
+            批量修改状态
+            </summary>
+            <param name="ids"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Management.ITaskAppService.ExportXmlAsync(System.String,System.String)">
+            <summary>
+            导出为xml文件
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Management.ITaskAppService.InputXml(System.String)">
+            <summary>
+            导入xml文件
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Management.TaskAppService.CreateNode(System.Xml.XmlDocument,System.Xml.XmlNode,System.String,System.String)">
+            <summary>      
+            创建节点      
+            </summary>      
+            <param name="xmldoc"></param>  xml文档    
+            <param name="parentnode"></param>父节点      
+            <param name="name"></param>  节点名    
+            <param name="value"></param>  节点值    
+                
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.StartPlan">
+            <summary>
+            开始计划
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.TaskId">
+            <summary>
+            对应的任务
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.Description">
+            <summary>
+            详细信息
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.Frequency">
+            <summary>
+            执行频率   一次，每天，每周，每月
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.Interval">
+            <summary>
+            间隔时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.IntervalUnit">
+            <summary>
+            间隔单位
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.DetailWeek">
+            <summary>
+            具体执行工作日(每周特用)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.DetailMonth">
+            <summary>
+            具体执行工作日月(每月特用)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.DetailMonthDay">
+            <summary>
+            具体执行工作日月(每月特用)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.ExpectTime">
+            <summary>
+            到期时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.IsDelay">
+            <summary>
+            是否延迟
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.Delay">
+            <summary>
+            任务延迟时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.DelayUnit">
+            <summary>
+            任务延迟时间单位
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.IsRepeat">
+            <summary>
+            是否重复
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.RepeatInterval">
+            <summary>
+            重复间隔   1小时，五分钟，十分钟……
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.RepeatIntervalUnit">
+            <summary>
+            重复间隔单位
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.RepeatLastTime">
+            <summary>
+            重复持续时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Management.Trigger.Dto.TaskTriggerDto.PerUser">
+            <summary>
+            登录时操作用户
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.HospId">
+            <summary>
+            医院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.TerminalNo">
+            <summary>
+            终端编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.TradeNo">
+            <summary>
+            自助机流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.MedicareType">
+            <summary>
+            医保类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.SendLogno">
+            <summary>
+            第三方流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.MedicareLogno">
+            <summary>
+            医保流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.BusinessCode">
+            <summary>
+            业务周期号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.MedicareCardId">
+            <summary>
+            医保卡号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.CardSafeNo">
+            <summary>
+            卡内号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.Pid">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.TransDate">
+            <summary>
+            交易日期
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.OperCode">
+            <summary>
+            操作员号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.TotalAmt">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.PubAmt">
+            <summary>
+            统筹金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.OwnAmt">
+            <summary>
+            自费金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.TransType">
+            <summary>
+            交易类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.TransResult">
+            <summary>
+            交易结果
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.Memo">
+            <summary>
+            备注说明
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.Extend">
+            <summary>
+            备用字段
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.TransName">
+            <summary>
+            交易名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.PatientId">
+            <summary>
+            病人ID
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.Channel">
+            <summary>
+            数据渠道(0：自助机 1：窗口)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.Base.TransDataDto.UploadFlag">
+            <summary>
+            是否已上送--0：未上送 1：已上送（本地表需要）
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.SignId">
+            <summary>
+            签到表主键
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.CheckAccDate">
+            <summary>
+            对账日期
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.CheckAccType">
+             <summary>
+             对账类型
+             1.平台数据和医保对账
+            2.his数据和医保对账
+             </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.MedicareType">
+            <summary>
+            医保类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.BusinessCode">
+            <summary>
+            业务周期号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.MedAllAmount">
+            <summary>
+            医保端总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.MedOverallAmount">
+            <summary>
+            医保端统筹总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.MedSelfAmount">
+            <summary>
+            医保端自费总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.HisAllAmount">
+            <summary>
+            His端总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.HisOverallAmount">
+            <summary>
+            His端统筹总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.HisSelfAmount">
+            <summary>
+            His端自费总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.PluginAllAmount">
+            <summary>
+            插件端统筹总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.PluginOverallAmount">
+            <summary>
+            插件端统筹总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.PluginSelfAmount">
+            <summary>
+            插件端自费总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.CheckAccResult">
+             <summary>
+             对账结果
+             0：对账成功
+            1：对账失败（通讯等原因无法对账）
+            2：对账不平
+             </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.Channel">
+             <summary>
+             渠道
+             0：自助机
+            1：窗口
+             </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.CheckTransType">
+             <summary>
+             对账交易类型
+             0：正向交易（结算）
+            1：反向交易（冲正）
+             </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.DiffAllAmount">
+            <summary>
+            总金额差额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.DiffOverallAmount">
+            <summary>
+            统筹总金额差额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.DiffSelfAmount">
+            <summary>
+            自费总金额差额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.CheckErrorType">
+             <summary>
+             对账错误类型
+            0：短款
+            1：长款
+            2：混合（短款、长款、未知原因）
+             </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.MedAllCount">
+            <summary>
+            医保总笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.HisAllCount">
+            <summary>
+            His总笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoDto.PluginAllCount">
+            <summary>
+            插件总笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.MedAllAmt">
+            <summary>
+            医保端总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.MedAllCount">
+            <summary>
+            医保端总笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.HisAllAmt">
+            <summary>
+            HIS端总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.HisAllCount">
+            <summary>
+            HIS端总笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.PluginAllAmt">
+            <summary>
+            插件端总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.PluginAllCount">
+            <summary>
+            插件端总笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.SuccessDays">
+            <summary>
+            对账成功天数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.FailDays">
+            <summary>
+            对账失败天数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.NoCheckDays">
+            <summary>
+            未对账天数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.MedicareType">
+            <summary>
+            医保类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoByMonthDto.CheckTransType">
+            <summary>
+            对账交易类型
+            0：正向交易（结算）
+            1：反向交易（冲正）
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckDateInfoDto.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckDateInfoDto.CheckResult">
+            <summary>
+            对账结果
+            0：正常
+            1：短款
+            2：长款
+            3：混合
+            4：未对账
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto.StartDate">
+            <summary>
+            对账日期--开始
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto.EndDate">
+            <summary>
+            对账日期--结束
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto.CheckAccResult">
+            <summary>
+            对账结果(0：对账成功 1：对账失败（通讯等原因无法对账）2：对账不平)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto.MedicareType">
+            <summary>
+            医保类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto.YearMonth">
+            <summary>
+            对账年/月
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto.Date">
+            <summary>
+            对账日期
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Medical.MedCheckAccountinfos.MedCheckAccountinfoAppService.CreateFilteredQuery(YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto)">
+            <summary>
+            查询对账数据（列表和友好界面共用）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Medical.MedCheckAccountinfos.MedCheckAccountinfoAppService.GetDataByMonth(YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto)">
+            <summary>
+            月对账情况汇总
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Medical.MedCheckAccountinfos.MedCheckAccountinfoAppService.GetDateList(YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto)">
+            <summary>
+            日对账情况列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Medical.MedCheckAccountinfos.MedCheckAccountinfoAppService.GetContentByDate(YuanTu.Platform.Medical.MedCheckAccountinfos.Dto.MedCheckAccountinfoRequestDto)">
+            <summary>
+            根据日期获取日对账明细
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.HospId">
+            <summary>
+            医院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.TerminalNo">
+            <summary>
+            终端编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.MedicareType">
+            <summary>
+            医保类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.SendLogno">
+            <summary>
+            第三方流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.MedicareLogno">
+            <summary>
+            医保流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.BusinessCode">
+            <summary>
+            业务周期号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.OperCode">
+            <summary>
+            操作员号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.MedicareCardId">
+            <summary>
+            医保卡号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.Pid">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.TransDate">
+            <summary>
+            交易日期
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.TotalAmt">
+            <summary>
+            总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.ExpType">
+             <summary>
+             异常类型
+             0：医保端多数据
+            1：HIS端多数据
+             </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.Memo">
+            <summary>
+            备注说明
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.Extend">
+            <summary>
+            备用字段
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.TransName">
+            <summary>
+            交易名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.Channel">
+            <summary>
+            数据渠道(0：自助机 1：窗口)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.OptExpType">
+            <summary>
+            异常处理方式
+            0：医保端手动冲正
+            1：系统补录交易记录
+            2：短款-手动标记不参与对账
+            3：其他原因-手动标记不参与对账
+            4：金额差异
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataDto.IsOpt">
+            <summary>
+            异常数据是否已经处理(0：未处理 1：已处理)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataRequestDto.BusinessCode">
+            <summary>
+            业务周期号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataRequestDto.Pid">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedCheckExpDatas.Dto.MedCheckExpDataRequestDto.MedicareLogno">
+            <summary>
+            医保流水号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransDatas.Dto.MedTransDataDto.InputStr">
+            <summary>
+            医保原始入参
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransDatas.Dto.MedTransDataDto.OutputStr">
+            <summary>
+            医保原始出参
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.AreaCode">
+            <summary>
+            医保区域
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.HospId">
+            <summary>
+            医院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.TerminalNo">
+            <summary>
+            终端编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.MedicareType">
+            <summary>
+            医保类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.SuccessCount">
+            <summary>
+            成功交易笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.FailCount">
+            <summary>
+            失败交易笔数
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.SuccessAmt">
+            <summary>
+            成功交易总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.FailAmt">
+            <summary>
+            成功交易总金额
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.Transdate">
+            <summary>
+            交易日期
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.Memo">
+            <summary>
+            备注说明
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.Extend">
+            <summary>
+            备用字段
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsDto.TerminalName">
+            <summary>
+            终端名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsRequestDto.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsRequestDto.EndDate">
+            <summary>
+            结束日期
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Medical.MedTransStatisticss.MedTransStatisticsAppService.GetUnionPage(YuanTu.Platform.Medical.MedTransStatisticss.Dto.MedTransStatisticsRequestDto)">
+            <summary>
+            根据参数连表查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YuanTu.Platform.Net.MimeTypes.MimeTypeNames">
+            <summary>
+            Common mime types. 
+            </summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXJavascript">
+            <summary>Used to denote the encoding necessary for files containing JavaScript source code. The alternative MIME type for this file type is text/javascript.</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioL24">
+            <summary>24bit Linear PCM audio at 8-48kHz, 1-N channels; Defined in RFC 3190</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXShockwaveFlash">
+            <summary>Adobe Flash files for example with the extension .swf</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationOctetStream">
+            <summary>Arbitrary binary data.[5] Generally speaking this type identifies files that are not associated with a specific application. Contrary to past assumptions by software packages such as Apache this is not a type that should be applied to unknown files. In such a case, a server or application should not indicate a content type, as it may be incorrect, but rather, should omit the type in order to allow the recipient to guess the type.[6]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationAtomXml">
+            <summary>Atom feeds</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextCss">
+            <summary>Cascading Style Sheets; Defined in RFC 2318</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextCmd">
+            <summary>commands; subtype resident in Gecko browsers like Firefox 3.5</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextCsv">
+            <summary>Comma-separated values; Defined in RFC 4180</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXDeb">
+            <summary>deb (file format), a software package format used by the Debian project</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MultipartEncrypted">
+            <summary>Defined in RFC 1847</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MultipartSigned">
+            <summary>Defined in RFC 1847</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MessageHttp">
+            <summary>Defined in RFC 2616</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ModelExample">
+            <summary>Defined in RFC 4735</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXDvi">
+            <summary>device-independent document in DVI format</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXmlDtd">
+            <summary>DTD files; Defined by RFC 3023</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationJavascript" -->
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationEcmascript">
+            <summary>ECMAScript/JavaScript; Defined in RFC 4329 (equivalent to application/javascript but with stricter processing rules)</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationEdifact">
+            <summary>EDI EDIFACT data; Defined in RFC 1767</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationEdiX12">
+            <summary>EDI X12 data; Defined in RFC 1767</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MessagePartial">
+            <summary>Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MessageRfc822">
+            <summary>Email; EML files, MIME files, MHT files, MHTML files; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextXml">
+            <summary>Extensible Markup Language; Defined in RFC 3023</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoXFlv">
+            <summary>Flash video (FLV files)</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ImageGif">
+            <summary>GIF image; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextXGwtRpc">
+            <summary>GoogleWebToolkit data</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXGzip">
+            <summary>Gzip</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextHtml">
+            <summary>HTML; Defined in RFC 2854</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ImageVndMicrosoftIcon">
+            <summary>ICO image; Registered[9]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ModelIges">
+            <summary>IGS files, IGES files; Defined in RFC 2077</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MessageImdnXml">
+            <summary>IMDN Instant Message Disposition Notification; Defined in RFC 5438</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationJson">
+            <summary>JavaScript Object Notation JSON; Defined in RFC 4627</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationJsonPatch">
+            <summary>JavaScript Object Notation (JSON) Patch; Defined in RFC 6902</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextJavascript" -->
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ImagePjpeg">
+            <summary>JPEG JFIF image; Associated with Internet Explorer; Listed in ms775147(v=vs.85) - Progressive JPEG, initiated before global browser support for progressive JPEGs (Microsoft and Firefox).</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ImageJpeg">
+            <summary>JPEG JFIF image; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextXJqueryTmpl">
+            <summary>jQuery template data</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndGoogleEarthKmlXml">
+            <summary>KML files (e.g. for Google Earth)</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXLatex">
+            <summary>LaTeX files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoXMatroska">
+            <summary>Matroska open media format</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet">
+            <summary>Microsoft Excel 2007 files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndMsExcel">
+            <summary>Microsoft Excel files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation">
+            <summary>Microsoft Powerpoint 2007 files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndMsPowerpoint">
+            <summary>Microsoft Powerpoint files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument">
+            <summary>Microsoft Word 2007 files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationMsword">
+            <summary>Microsoft Word files[15]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MultipartAlternative">
+            <summary>MIME Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MultipartMixed">
+            <summary>MIME Email; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MultipartRelated">
+            <summary>MIME Email; Defined in RFC 2387 and used by MHTML (HTML mail)</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.MultipartFormData">
+            <summary>MIME Webform; Defined in RFC 2388</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndMozillaXulXml">
+            <summary>Mozilla XUL files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioMpeg">
+            <summary>MP3 or other MPEG audio; Defined in RFC 3003</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioMp4">
+            <summary>MP4 audio</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoMp4">
+            <summary>MP4 video; Defined in RFC 4337</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoMpeg">
+            <summary>MPEG-1 video with multiplexed audio; Defined in RFC 2045 and RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ModelMesh">
+            <summary>MSH files, MESH files; Defined in RFC 2077, SILO files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioBasic">
+            <summary>mulaw audio at 8 kHz, 1 channel; Defined in RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoOgg">
+            <summary>Ogg Theora or other video (with audio); Defined in RFC 5334</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioOgg">
+            <summary>Ogg Vorbis, Speex, Flac and other audio; Defined in RFC 5334</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationOgg">
+            <summary>Ogg, a multimedia bitstream container format; Defined in RFC 5334</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXopXml">
+            <summary>OP</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentGraphics">
+            <summary>OpenDocument Graphics; Registered[14]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentPresentation">
+            <summary>OpenDocument Presentation; Registered[13]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentSpreadsheet">
+            <summary>OpenDocument Spreadsheet; Registered[12]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationVndOasisOpendocumentText">
+            <summary>OpenDocument Text; Registered[11]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs12">
+            <summary>p12 files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Certificates">
+            <summary>p7b and spc files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Mime">
+            <summary>p7c files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Certreqresp">
+            <summary>p7r files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXPkcs7Signature">
+            <summary>p7s files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationPdf">
+            <summary>Portable Document Format, PDF has been in use for document exchange on the Internet since 1993; Defined in RFC 3778</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ImagePng">
+            <summary>Portable Network Graphics; Registered,[8] Defined in RFC 2083</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationPostscript">
+            <summary>PostScript; Defined in RFC 2046</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoQuicktime">
+            <summary>QuickTime video; Registered[10]</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXRarCompressed">
+            <summary>RAR archive files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioVndRnRealaudio">
+            <summary>RealAudio; Documented in RealPlayer Customer Support Answer 2559</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationRdfXml">
+            <summary>Resource Description Framework; Defined by RFC 3870</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationRssXml">
+            <summary>RSS feeds</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationSoapXml">
+            <summary>SOAP; Defined by RFC 3902</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXStuffit">
+            <summary>StuffIt archive files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ImageSvgXml">
+            <summary>SVG vector image; Defined in SVG Tiny 1.2 Specification Appendix M</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ImageTiff">
+            <summary>Tag Image File Format (only for Baseline TIFF); Defined in RFC 3302</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXTar">
+            <summary>Tarball files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextPlain">
+            <summary>Textual data; Defined in RFC 2046 and RFC 3676</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXFontTtf">
+            <summary>TrueType Font No registered MIME type, but this is the most commonly used</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.TextVcard">
+            <summary>vCard (contact information); Defined in RFC 6350</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioVorbis">
+            <summary>Vorbis encoded audio; Defined in RFC 5215</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioVndWave">
+            <summary>WAV audio; Defined in RFC 2361</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationFontWoff">
+            <summary>Web Open Font Format; (candidate recommendation; use application/x-font-woff until standard is official)</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoWebm">
+            <summary>WebM Matroska-based open media format</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioWebm">
+            <summary>WebM open media format</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioXMsWax">
+            <summary>Windows Media Audio Redirector; Documented in Microsoft help page</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.AudioXMsWma">
+            <summary>Windows Media Audio; Documented in Microsoft KB 288102</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.VideoXMsWmv">
+            <summary>Windows Media Video; Documented in Microsoft KB 288102</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ModelVrml">
+            <summary>WRL files, VRML files; Defined in RFC 2077</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ModelX3DXml">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3D XML files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ModelX3DBinary">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3DB binary files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ModelX3DVrml">
+            <summary>X3D ISO standard for representing 3D computer graphics, X3DV VRML files</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationXhtmlXml">
+            <summary>XHTML; Defined by RFC 3236</summary>
+        </member>
+        <member name="F:YuanTu.Platform.Net.MimeTypes.MimeTypeNames.ApplicationZip">
+            <summary>ZIP archive files; Registered[7]</summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.DisplayName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.Code">
+            <summary>
+            院区编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.OfflineMode">
+            <summary>
+            离线模式 1-离线 0-正常
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.DockMode">
+            <summary>
+            对接模式 1-新网关模式 2-老网关模式  3-兼容模式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.UnionMode">
+            <summary>
+            医联体通用模式（共用代码）0-否 1-是
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.UnionId">
+            <summary>
+            医联体ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.HospitalId">
+            <summary>
+            医院编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.OrgSecret">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.GatewayUrl">
+            <summary>
+            前置网关地址
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.Timeout">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.ProvincialMiCode">
+            <summary>
+            省医保编码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.MunicipalMiCode">
+            <summary>
+            市医保编码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.ServerUrl">
+            <summary>
+            后台服务地址
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgDto.MonitorUrl">
+            <summary>
+            监控平台地址
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgExDto.Id">
+            <summary>
+            编号，自增
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgExDto.DisplayName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Organizations.Dto.AbpOrgExDto.Code">
+            <summary>
+            院区编号
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Organizations.IAbpOrgAppService.GetOrgsAsync">
+            <summary>
+            获取必要信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.PartBaseDto`1.Attachments">
+            <summary>
+            附件
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCameraDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.CardType">
+            <summary>
+            卡类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Print">
+            <summary>
+            打印
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardDispenserDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Inhale">
+            <summary>
+            吸入式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.IsBridge">
+            <summary>
+            桥接
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.CardType">
+            <summary>
+            卡类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCardReaderDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STCashBoxDto.CashType">
+            <summary>
+            现金类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STECGDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STHeightAndWeightDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STKeyBoardDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STLedScreenDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOtherDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STOximeterDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.IsDoubleTray">
+            <summary>
+            双纸盒
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.IsPrinterType">
+            <summary>
+            打印机类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.IsPrintPaperSize">
+            <summary>
+            纸张大小
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.CardType">
+            <summary>
+            卡类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STPrinterDto.Print">
+            <summary>
+            打印
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STScannerDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STSphygmomanometerDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.Code">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.BrandId">
+            <summary>
+            品牌
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.Model">
+            <summary>
+            型号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.CommunicationType">
+            <summary>
+            通讯类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.Port">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.IsUsbToPort">
+            <summary>
+            支持U转串
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.Baud">
+            <summary>
+            波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Parts.Dto.STThermometerDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.PlatformAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.Roles.Dto.AbpMenuPermissionDto">
+            <summary>
+            菜单权限
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Roles.Dto.AbpMenuPermissionDto.MenuId">
+            <summary>
+            菜单ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Roles.Dto.AbpMenuPermissionDto.RoleId">
+            <summary>
+            角色ID
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Roles.Dto.AbpMenuPermissionDto.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.Sys.AbpAttachmentAppService">
+            <summary>
+            附件管理服务类
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Sys.AbpAttachmentAppService.#ctor(Abp.Domain.Repositories.IRepository{YuanTu.Platform.AbpAttachment,System.String},Microsoft.AspNetCore.Http.IHttpContextAccessor,Abp.Domain.Repositories.IRepository{YuanTu.Platform.ST.STPluginFolder,System.String},Abp.Domain.Repositories.IRepository{YuanTu.Platform.Sys.AbpZipLog,System.Int64})">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Sys.AbpAttachmentAppService.UploadFileById(System.String,System.String)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="fid">父级文件夹ID</param>
+            <param name="rid">顶级节点ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Sys.AbpAttachmentAppService.DeleteByIds(System.String)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="ids">主键ID集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Sys.AbpAttachmentAppService.ZipFile(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            压缩单个文件
+            </summary>
+            <param name="filePath">被压缩的文件名称(包含文件路径)，文件的全路径</param>
+            <param name="trueFileName">压缩包内真实文件名称</param>
+            <param name="zipedFileName">压缩后的文件名称(包含文件路径)，保存的文件名称</param>
+            <param name="compressionLevel">压缩率0（无压缩）到 9（压缩率最高）</param>
+        </member>
+        <member name="T:YuanTu.Platform.Sys.AbpAttachmentDto">
+            <summary>
+            附件管理
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.FileExt">
+            <summary>
+            文件扩展名
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.ServerPath">
+            <summary>
+            服务器路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.FileSize">
+            <summary>
+            大小
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.HashCode">
+            <summary>
+            哈希码
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.LocalPath">
+            <summary>
+            本地路径
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.ExtendId">
+            <summary>
+            扩展ID ，包括 配件、插件等编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachmentDto.Url">
+            <summary>
+            完整路径
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachment.Dto.AbpAttachmentExDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpAttachment.Dto.AbpAttachmentExDto.Url">
+            <summary>
+            下载地址
+            </summary> 
+        </member>
+        <member name="T:YuanTu.Platform.Sys.AbpAttachment.Dto.PagedAbpAttachmentDto">
+            <summary>
+            附件管理
+            </summary>
+        </member>
+        <member name="T:YuanTu.Platform.Sys.AbpAttachment.IAbpAttachmentAppService">
+            <summary>
+            附件管理
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.AbpTableId">
+            <summary>
+            表Id
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.CanbeNull">
+            <summary>
+            允许为空
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.MinLen">
+            <summary>
+            最小长度
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.MaxLen">
+            <summary>
+            最大长度
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Regex">
+            <summary>
+            正则表达式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.RegexDescribe">
+            <summary>
+            错误描述
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.MapType">
+            <summary>
+            映射类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.MapTable">
+            <summary>
+            映射对象
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.MapEnum">
+            <summary>
+            映射枚举值
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.DefaultEnum">
+            <summary>
+            默认枚举值
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Visible">
+            <summary>
+            是否显示/隐藏
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Sensitive">
+            <summary>
+            是否脱敏
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Width">
+            <summary>
+            列宽
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.MinWidth">
+            <summary>
+            列宽
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.MaxWidth">
+            <summary>
+            列宽
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Align">
+            <summary>
+            对齐方式，可选值为 left 左对齐、right 右对齐和 center 居中对齐
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Style">
+            <summary>
+            列的样式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.ClassName">
+            <summary>
+            列的样式名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Fixed">
+            <summary>
+            列是否固定在左侧或者右侧，可选值为 left 左侧和 right 右侧
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Ellipsis">
+            <summary>
+            开启后，文本将不换行，超出部分显示为省略号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpColumns.Dto.AbpColumnDto.Tooltip">
+            <summary>
+            开启后，文本将不换行，超出部分显示为省略号，并用 Tooltip 组件显示完整内容
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpFolders.Dto.AbpFolderDto.Name">
+            <summary>
+            文件夹名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpFolders.Dto.AbpFolderDto.FolderType">
+            <summary>
+            文件夹类型
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpFolders.Dto.AbpFolderDto.ExtendId">
+            <summary>
+            扩展字段
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.IP">
+            <summary>
+            主机地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.Mac">
+            <summary>
+            Media Access Control Address
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.TerminalNo">
+            <summary>
+            终端号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.HospitalId">
+            <summary>
+            医院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.HospitalSubId">
+            <summary>
+            分院编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.HospitalName">
+            <summary>
+            医院名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.HospitalSubName">
+            <summary>
+            分院名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.TraceId">
+            <summary>
+            追溯Id
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.ParentTraceId">
+            <summary>
+            父追溯Id
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.BusinessName">
+            <summary>
+            业务名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.SubBusinessName">
+            <summary>
+            子业务名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.LogType">
+            <summary>
+            日志类型(Request, Response, Exception)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.LogCatalog">
+            <summary>
+            日志分类(Pos Net Hardware MedIns)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.Msg">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.Position">
+            <summary>
+            代码位置
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.LogLevel">
+            <summary>
+            日志级别(Debug Info Warn Error Fatal)
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.LogCode">
+            <summary>
+            日志编码
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.CurrentThreadId">
+            <summary>
+            当前线程号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.BusinessServiceUrl">
+            <summary>
+            业务服务访问地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.Extend">
+            <summary>
+            扩展字段
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.InterfaceName">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.ErrCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.RecordTime">
+            <summary>
+            日志记录时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.ErrLevel">
+            <summary>
+            错误等级
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.ErrMsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.ErrStackTrace">
+            <summary>
+            错误堆栈信息
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpLogs.Dto.AbpLogDto.ExecutionTime">
+            <summary>
+            执行时长（单位：毫秒）
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.AbpTables.Dto.AbpTableDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.Dto.AbpWardAreaDto.Code">
+            <summary>
+            编号
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.Dto.AbpWardAreaDto.Name">
+            <summary>
+            名称
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Sys.Dto.AbpWardAreaDto.BuildingId">
+            <summary>
+            建筑Id
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.Dto.AbpWardAreaDto.FloorId">
+            <summary>
+            所在楼层
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.Dto.AbpWardAreaDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:YuanTu.Platform.Sys.IAbpWardAreaAppService.GetAllByOrgIdAsync(System.Int64)">
+            <summary>
+            根据orgid获取病区
+            </summary>
+            <param name="orgId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Sys.CustomEnums.AbpCustomEnumAppService.UpdateCache">
+            <summary>
+            更新缓存文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YuanTu.Platform.Sys.CustomEnums.AbpCustomEnumAppService.SendNotifications(System.String)">
+            <summary>
+            发送实时通知，通知前端更新缓存
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.CustomEnums.Dto.AbpCustomEnumDto.ImageUrl">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.CustomEnums.Dto.AbpCustomEnumDto.ThumbnailUrl">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.CustomEnums.Dto.CreateAbpCustomEnumDto.ImageUrl">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.CustomEnums.Dto.CreateAbpCustomEnumDto.ThumbnailUrl">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Sys.CustomEnums.Dto.CreateAbpCustomEnumDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.UC.Dto.UCBlogDto.Title">
+            <summary>
+            标题
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.UC.Dto.UCBlogDto.CatalogId">
+            <summary>
+             分类
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.UC.Dto.UCBlogDto.Content">
+            <summary>
+            正文
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.UC.Dto.UCBlogDto.Tag">
+            <summary>
+            标签
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.UC.Dto.UCBlogDto.VisibleLevel">
+            <summary>
+            可见级别
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.UC.Dto.UCBlogDto.Author">
+            <summary>
+            作者
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.UC.Dto.UCCatalogDto.Name">
+            <summary>
+             分类
+            </summary> 
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.ServerIP">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.ServerPort">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.TimeOut">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.TPDU">
+            <summary>
+            银行TPDU
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.Head">
+            <summary>
+            报文头
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.TerminalId">
+            <summary>
+            终端编号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MerchantId">
+            <summary>
+            商户代码
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MerchantName">
+            <summary>
+            商户名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MKey">
+            <summary>
+            主密钥
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MainKeyIndex">
+            <summary>
+            主密钥索引
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.PinKeyIndex">
+            <summary>
+            PIN密钥索引
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MacKeyIndex">
+            <summary>
+            MAC密钥索引
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.TrkKeyIndex">
+            <summary>
+            MTR密钥索引
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.BankType">
+            <summary>
+            银行类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.CardReaderName">
+            <summary>
+            银联读卡器名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.Inhale">
+            <summary>
+            是否吸入式
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.CardReaderPort">
+            <summary>
+            读卡器端口或U口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.CardReaderBaud">
+            <summary>
+            读卡器波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.AutoEject">
+            <summary>
+            自动退卡
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MKeyboardName">
+            <summary>
+            金属键盘名称
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MKeyboardPort">
+            <summary>
+            金属键盘串口或U口
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.MKeyboardBaud">
+            <summary>
+            金属键盘波特率
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.EnvMode">
+            <summary>
+            环境模式 0:真实环境 1:硬件模拟 2:离线模拟
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionConfigDto.Version">
+            <summary>
+            银联版本号
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.PlatformNo">
+            <summary>				
+            平台流水号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.Amount">
+            <summary>				
+            消费金额(分)				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.BankType">
+            <summary>				
+            商户类型				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.MerchantId">
+             <summary>				
+            商户号				
+             </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.TerminalId">
+            <summary>				
+            银行终端号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.IPAndPort">
+            <summary>				
+            地址:端口				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.TPDU">
+            <summary>				
+            银行TPDU				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.CallType">
+            <summary>				
+            调用方式				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.HospitalId">
+            <summary>				
+            医院编号				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.PatientId">
+            <summary>				
+            登记号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.PatientName">
+            <summary>				
+            姓名				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.IdNo">
+            <summary>				
+            身份证号码				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.Source">
+            <summary>				
+            操作员编号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.CardNo">
+            <summary>				
+            银行卡号				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.TradeType">
+            <summary>				
+            交易方式				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.FeeChannel">
+            <summary>				
+            交易渠道				
+            </summary>	
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.PayState">
+            <summary>				
+            交易状态				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.PayTime">
+            <summary>				
+            支付时间				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.FinishTime">
+             <summary>				
+            支付完成时间				
+             </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.BankPayNo">
+            <summary>				
+            银行流水号/检索参考号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.AuthorizeNo">
+            <summary>				
+            授权码				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.LotId">
+            <summary>				
+            批次号				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.IssuerCode">
+            <summary>				
+            发卡行号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.IssuerName">
+            <summary>				
+            发卡行名称				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.CardValidDate">
+            <summary>				
+            卡片有效期				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.DeviceIp">
+            <summary>				
+            终端IP				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.Element">
+            <summary>				
+            交易要素				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.ResquestContext">
+            <summary>				
+            银联原始入参报文				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.ResponseContext">
+            <summary>				
+            银联原始出参报文				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.Extend">
+            <summary>				
+            扩展参数				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionBaseDto.TransType">
+            <summary>
+            流水类型
+            </summary>
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.PlatformNo">
+            <summary>				
+            平台流水号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.Amount">
+            <summary>				
+            消费金额(分)				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.BankType">
+            <summary>				
+            商户类型				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.MerchantId">
+             <summary>				
+            商户号				
+             </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.TerminalId">
+            <summary>				
+            银行终端号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.IPAndPort">
+            <summary>				
+            地址:端口				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.TPDU">
+            <summary>				
+            银行TPDU				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.CallType">
+            <summary>				
+            调用方式				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.HospitalId">
+            <summary>				
+            医院编号				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.PatientId">
+            <summary>				
+            登记号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.PatientName">
+            <summary>				
+            姓名				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.IdNo">
+            <summary>				
+            身份证号码				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.Source">
+            <summary>				
+            操作员编号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.CardNo">
+            <summary>				
+            银行卡号				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.TradeType">
+            <summary>				
+            交易方式				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.FeeChannel">
+            <summary>				
+            交易渠道				
+            </summary>	
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.PayState">
+            <summary>				
+            交易状态				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.PayTime">
+            <summary>				
+            支付时间				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.FinishTime">
+             <summary>				
+            支付完成时间				
+             </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.BankPayNo">
+            <summary>				
+            银行流水号/检索参考号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.AuthorizeNo">
+            <summary>				
+            授权码				
+            </summary>			
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.LotId">
+            <summary>				
+            批次号				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.IssuerCode">
+            <summary>				
+            发卡行号				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.IssuerName">
+            <summary>				
+            发卡行名称				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.CardValidDate">
+            <summary>				
+            卡片有效期				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.DeviceIp">
+            <summary>				
+            终端IP				
+            </summary>		
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.Element">
+            <summary>				
+            交易要素				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.ResquestContext">
+            <summary>				
+            银联原始入参报文				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.ResponseContext">
+            <summary>				
+            银联原始出参报文				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.Extend">
+            <summary>				
+            扩展参数				
+            </summary>				
+        </member>
+        <member name="P:YuanTu.Platform.Union.UnionDataDto.TransType">
+            <summary>
+            流水类型
+            </summary>
+        </member>
+    </members>
+</doc>
